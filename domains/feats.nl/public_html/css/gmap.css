@@ -1,0 +1,19 @@
+#Map {
+	height:40%;
+	border: 1px #888888 solid;
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 3% 0% 0% 0%;
+}
+.conrol_bl {
+	background-image: url('/img/control_bl.png');
+}
+.conrol_br {
+	background-image: url('/img/control_br.png');
+}
+.conrol_tl {
+	background-image: url('/img/control_tl.png');
+}
+.conrol_tr {
+	background-image: url('/img/control_tr.png');
+}

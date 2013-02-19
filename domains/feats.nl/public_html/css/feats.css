@@ -1,0 +1,223 @@
+body {
+	position:absolute;
+	background-color: #ffffff;
+	color: #000000;
+	font-family: Bauhaus,Verdana, Geneva, sans-serif;
+	height:100%;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+#Header {
+	background: url("/img/ks_watermark.png") no-repeat;
+	background-size: 100% 100%;
+	height:17.44%;
+	margin: 0 1.07% 0 1.07%;
+}
+#Top {
+	height:75.46%;
+	margin: 0 1.07% 0 1.07%;
+	padding: 0;
+}
+#Bottom {
+	height:11.87%;
+	margin: 0 1.07% 0 1.07%;
+}
+#Footer {
+	display:block;
+	height:5.22%;
+	margin: 0 1.07% 0 1.07%;
+}
+#Menu_Container {
+	position:relative;
+	height:10.42%;
+	width:100%;
+}
+#Info {
+	display:block;
+	height:79.57%;
+	width:23.33%;
+	float:left;
+}
+#Content_Container {
+	height:79.57%;
+	width:76.66%;
+	margin: 0;
+	float:right;
+	word-wrap:break-word;
+}
+#Content {
+	margin: 0.5rem 0 0 0.5rem;
+	height: 95%;
+}
+#Menu_Landscape {
+	display:block;
+	height:100%;
+	width:76.66%;
+	float:right;
+}
+#Menu {
+	display:none;
+}
+.menuitem {
+	float:left;
+	height: 100%;
+	width: auto;
+	text-align: center;
+	font-size: 0.8rem;
+	color: #56008c;
+	background-color: #bbbbbb;
+	margin: 0 1rem 0 2rem;
+	padding: 0 2rem 0 2rem;
+	border: 1px #56008c solid;
+	border-radius: 0.2rem;
+	cursor: pointer;
+}
+.menu_text {
+	margin-top: 0.2rem;
+}
+#Social {
+	width:23.33%;
+	height:100%;
+	float:left;
+}
+#Pictures {
+	display:none;
+	position:relative;
+	height:80%;
+	top: 10%;
+}
+#Pictures .box {
+	margin: 0;
+}
+#Map {
+	height:40%;
+	border: 1px #ccadf4 solid;
+	border-radius: 0.2rem;
+	overflow: hidden;
+	margin: 0.5rem 0 0 0;
+}
+.tickercontainer {
+	overflow:hidden;
+	margin:0;
+	padding:0;
+	height: 2.5rem;
+}
+.tickercontainer .mask {
+	position: relative;
+	top: 0.8rem;
+	height: 0.8rem;
+	overflow: hidden;
+}
+#Marquee ul.newsticker {
+	position:relative;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+#Marquee ul.newsticker li {
+	float: left;
+	margin: 0;
+	padding-right: 2rem;
+}
+.logo {
+	height:100%;
+	float:left
+}
+.heading {
+	float:left;
+	color:#56008c;
+}
+.date {
+	float:right;
+	color:#56008c;
+}
+.heading h1 {
+	text-align: center;
+}
+.heading h1, .date h2 {
+	margin-bottom: 5px;
+}
+.par {
+	height:100%;
+	font-size: 0.8rem;
+	text-align:center;
+}
+.counter {
+	text-align:center;
+	position:relative;
+	top:10%
+}
+.cell {
+	width: 33%;
+	float: left;
+}
+.cell img {
+	margin-left: 2rem;
+	text-align: center;
+	max-width: 15rem;
+}
+.box {
+	border: 1px #ccadf4 solid;
+	border-radius: 0.2rem;
+	overflow: hidden;
+	margin: 1.5rem 0 0 0;
+	font-size: 0.8rem;
+}
+#social-icons {
+}
+.social {
+	float:left;
+	background: url('/img/social.png') no-repeat;
+	height: 37px;
+	width: 37px;
+	margin: 0.3rem 0 0 0.5rem
+}
+.twitter {
+	background-position: -2px -9px;
+}
+.facebook {
+	background-position: -2px -129px;
+}
+.googleplus {
+	background-position: -2px -169px;
+}
+@media screen and (max-height: 500px) { 
+	html {
+		font-size: 80%;
+	}
+}
+@media screen and (max-width: 950px) { 
+	html {
+		font-size: 80%;
+	}
+	.logo, .menuitem {
+		height:80%;
+	}
+}
+@media screen and (max-height: 400px) { 
+	html {
+		font-size: 60%;
+	}
+}
+@media screen and (max-width: 730px) { 
+	html {
+		font-size: 60%;
+	}
+	.logo, .menuitem {
+		height:60%;
+	}
+}
+@media screen and (max-height: 300px) { 
+	html {
+		font-size: 40%;
+	}
+}
+@media screen and (max-width: 550px) { 
+	html {
+		font-size: 40%;
+	}
+	.logo, .menuitem {
+		height:40%;
+	}
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<META http-equiv="Content-Style-Type" content="text/css">
+	<LINK rel="stylesheet" href="css/feats.css" type="text/css">
+	<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+	<script type="text/javascript">
+		function toggle(elem, marginLeft) {
+			if (elem.style.width == "790px") {
+				diminish(elem);
+			} else {
+				enlarge(elem, marginLeft);
+			}
+		}
+	    
+		function enlarge(elem, marginLeft){
+		  elem.style.zIndex="100";
+		  elem.style.position="relative";
+		  var anim = { 
+			width: "790px",
+			marginTop:"-345px"
+		  };
+		  anim["marginLeft"]=marginLeft;
+		  $(elem).animate(anim, 1000 );
+		};
+		function diminish(elem){
+		  $(elem).animate({ 
+			width: "220px",
+			marginLeft: "5px",
+			marginTop:"0px",
+		    zIndex:"0"
+		  }, 1000 );
+		};
+	</script
+</head>
+
+<body>
+	<div id="Canvas">
+		<div id="Header">
+			<div class="logo">
+				<img src="img/logo_animated.gif" width="100px"/>
+			</div>
+			<div class="heading">
+				<h1>Welcome to FEATS 2013</h1>
+				<i>Festival of European Anglophone Theatrical Societies</i>
+			</div>
+		</div>
+		<div class="par">
+			<p><strong>FEATS 2013 will be hosted by the <a href="http://www.aatg.nl/"target="_blank"> AATG</a> <br/>and held in The Hague at <a href="http://www.ks.nl/" target="_new">the Koninklijke Schouwburg</a><br/>from the 17th to the 20th of May</strong></p>
+			<p><strong>The AATG are now busy organising FEATS 2013.  Click on the video below to get a taste of what's to come next year.</strong></p>
+			<p><strong>Participating groups can now find all necessary Stage management documentation <a href="stage_management_docs.html">here</a></strong></p>
+		</div>
+		<div class="par">
+			<div class="cell"><img src="img/theatre_outside.jpg" width="220px" onmouseover="this.style.cursor='pointer'" onclick="toggle(this, '5px');" onmouseout="diminish(this);"/></div>
+			<div class="cell"><iframe width="220PX" src="http://www.youtube.com/embed/ZGjupOtgQ2U" frameborder="0" allowfullscreen></iframe></div>
+			<div class="cell"><img src="img/auditorium.jpg" width="220px" onmouseover="this.style.cursor='pointer'" onclick="toggle(this, '-522px');" onmouseout="diminish(this);" /></div>
+		</div>
+	</div>
+	<div class="counter">
+		<script language="JavaScript">
+		TargetDate = "5/17/2013 7:30 PM";
+		BackColor = "#56008c";
+		ForeColor = "#ffffff";
+		CountActive = true;
+		CountStepper = -1;
+		LeadingZero = true;
+		DisplayFormat = "Another %%D%% days, %%H%% hours, %%M%% minutes, %%S%% seconds to go";
+		FinishMessage = "It is finally here!";
+		</script>
+		<script language="JavaScript" src="http://scripts.hashemian.com/js/countdown.js"></script>
+	</div>
+</body>
+</html>

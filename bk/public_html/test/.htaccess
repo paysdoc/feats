@@ -1,0 +1,9 @@
+AuthUserFile /home/featsnl/domains/feats.nl/.htpasswd/.htpasswd
+AuthType Basic
+AuthName "Test Pages"
+Require valid-user
+
+ErrorDocument 500 /home/featsnl/domains/feats.nl/errors/500.html
+ErrorDocument 404 /home/featsnl/domains/feats.nl/errors/404.html
+ErrorDocument 403 /home/featsnl/domains/feats.nl/errors/403.html
+ErrorDocument 401 /home/featsnl/domains/feats.nl/errors/401.html
