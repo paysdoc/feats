@@ -28,8 +28,9 @@
 </head>
 
 <body>
+    <div id="TheWholePage">
 	<div id="Header"> 
-		<img src="/img/logo_animated.gif" alt="feats animated logo" class="logo"/>
+		<img src="/img/logo_animated.gif" alt="feats animated logo" class="img logo"/>
 		<div class="heading">
 			<h1>Welcome to FEATS 2013</h1>
 			<i>Festival of European Anglophone Theatrical Societies</i>
@@ -84,11 +85,9 @@
 				</div>
 			</div>
 			<div id="Social">
-				<div id="social-icons">
-					<a href="http://www.facebook.com/groups/248508651916737" target="_blank" class="social facebook" title="follow us on Facebook"></a>
-					<a href="https://twitter.com/FEATStheHague" target="_blank" class="social twitter" title="follow us on Twitter"></a>
-					<a href="https://plus.google.com/107416515521837654668/posts?hl=en" target="_blank" class="social googleplus" title="follow us on Google"></a>
-				</div>
+				<a href="http://www.facebook.com/groups/248508651916737" target="_blank" class="img" title="follow us on Facebook"><img src="/img/fb.png" height="80%"/></a>
+				<a href="https://twitter.com/FEATStheHague" target="_blank" class="img" title="follow us on Twitter"><img src="/img/tw.png" height="80%"/></a>
+				<a href="https://plus.google.com/107416515521837654668/posts?hl=en" target="_blank" class="img" title="follow us on Google"><img src="/img/gplus.png" height="80%"/></a>
 			</div>
 		</div> 
 		<div id="Content_Container">
@@ -123,20 +122,20 @@
 		</div>
 	</div>
 	<div id="Bottom">
-		<div id="Pictures" class="box">
+		<div id="Pictures"><div class="box">
 			<div class="par">
 				<div class="cell"><img src="img/theatre_outside.jpg" onmouseover="this.style.cursor='pointer'" onclick="toggle(this, '5px');" onmouseout="diminish(this);"/></div>
 				<div class="cell"><iframe height="100%" src="http://www.youtube.com/embed/ZGjupOtgQ2U" frameborder="0" allowfullscreen></iframe></div>
 				<div class="cell"><img src="img/auditorium.jpg" onmouseover="this.style.cursor='pointer'" onclick="toggle(this, '-522px');" onmouseout="diminish(this);" /></div>
 			</div>
-		</div>
+		</div></div>
 	</div>
 	<div id="Footer">
 		<div class="counter">
 			<script language="JavaScript">
 			TargetDate = "5/17/2013 7:30 PM";
-			BackColor = "#ffffff";
-			ForeColor = "#56008c";
+			BackColor = "#36005c";
+			ForeColor = "#ffffff";
 			CountActive = true;
 			CountStepper = -1;
 			LeadingZero = true;
@@ -146,6 +145,7 @@
 			<script language="JavaScript" src="http://scripts.hashemian.com/js/countdown.js"></script>
 		</div>
 	</div>
+    </div>
 <script type="text/javascript">
 	window.onload = loadScript;
 	jQuery('#webticker').webTicker();

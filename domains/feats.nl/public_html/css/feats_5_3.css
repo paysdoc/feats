@@ -1,6 +1,4 @@
 #Header {
-	background: url("/img/ks_watermark.png") no-repeat;
-	background-size: 100% 100%;
 	height:17.44%;
 	margin: 0 1.07% 0 1.07%;
 }
@@ -19,7 +17,7 @@
 }
 #Menu_Container, #Info {
 	height:100%;
-	width:22.75%;
+	width:18.75%;
 	float:left;
 }
 #Info {
@@ -32,7 +30,7 @@
 	word-wrap:break-word;
 }
 #Content {
-	margin: 0.5rem;
+	margin: 1rem 0 0 0;
 }
 #Menu_Landscape {
 	width:100%;
@@ -43,18 +41,14 @@
 	height:19.16%;
 	width:100%;
 }
+#Map {
+	margin: 1rem 0 0 0;
+}
 .menuitem {
 	height: 2.2rem;
-	width: 100%;
-	text-align: center;
-	font-size: 0.8rem;
-	color: #56008c;
-	background-color: #bbbbbb;
+	width: 70%;
 	margin: 1rem 0 0 0;
 	padding: 0;
-	border: 1px #56008c solid;
-	cursor: pointer;
-	clear: left;
 }
 .menuitem hover {
 	color: #ccadf4;
