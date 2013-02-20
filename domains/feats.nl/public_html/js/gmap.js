@@ -1,4 +1,12 @@
 function init_map() {
+	buildMap("Map");
+}
+
+function mapOnContent() {
+	buildMap("Content");
+}
+
+function buildMap(id) {
 	var ks_ll = new google.maps.LatLng(52.082251,4.315318);
         var mapOptions = {
           center: ks_ll,
@@ -7,7 +15,7 @@ function init_map() {
 	  overviewMapControl:true,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
-        var theMap = new google.maps.Map(document.getElementById("Map"),
+        var theMap = new google.maps.Map(document.getElementById(id),
             mapOptions);
 	
 	setTimeout(function() {

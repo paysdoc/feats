@@ -97,6 +97,7 @@ body {
 	height:40%;
 	overflow: hidden;
 	margin: 1rem 0 0 0;
+	cursor: pointer;
 }
 .tickercontainer {
 	overflow:hidden;
@@ -109,6 +110,9 @@ body {
 	top: 0.8rem;
 	height: 0.8rem;
 	overflow: hidden;
+}
+#Marquee {
+	cursor: pointer;
 }
 #Marquee ul.newsticker {
 	position:relative;

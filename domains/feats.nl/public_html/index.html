@@ -18,7 +18,7 @@
 				    xhr.overrideMimeType("text/html");
 				}
 			}).done(function data(data, textStatus, xhr) {
-				$("#Content").empty().html(data);
+				$("#Content").empty().html(data).css('background', '');
 			}).fail(function error() {
 				alert("FAIL!!");
 			});
@@ -55,17 +55,17 @@
 				<div class="menu_text"><strong>Audience</strong></div>
 			</div>
 		</div>
-		<div class="menubutton" onclick="$('#Content').empty().html($('#Map').clone());init_map();">
+		<div class="menubutton" onclick="$('#Content').empty().html(mapOnContent());">
 			<div class="menuitem">
 				<div class="menu_text"><strong>Map</strong></div>
 			</div>
 		</div>
-		<div class="menubutton" onclick="$('#Content').empty().html($('#webticker').clone());">
+		<div class="menubutton" onclick="$('#Content').empty().html($('#webticker').clone()).css('background-color', '');">
 			<div class="menuitem">
 				<div class="menu_text"><strong>Groups</strong></div>
 			</div>
 		</div>
-		<div class="menubutton" onclick="$('#Content').empty().html($('#Tickets').clone());">
+		<div class="menubutton" onclick="$('#Content').empty().html($('#Tickets').clone()).css('background-color', '');">
 			<div class="menuitem">
 				<div class="menu_text"><strong>Tickets</strong></div>
 			</div>
@@ -99,9 +99,9 @@
 			</div>
 		</div>
 		<div id="Info">
-			<div id="Map"></div>
+			<div id="Map" onclick="$('#Content').empty().html(mapOnContent());"></div>
 			<div id="Tickets"><div class="box"><p>Season Tickets (4 days) : &euro;70,- pp<br />Per day : &euro;20,- pp</p><p>Tickets will be on sale soon</p></div></div>
-			<div id="Marquee">
+			<div id="Marquee" onclick="$('#Content').empty().html($('#webticker').clone());">
 				<div class="box">
 					<ul id="webticker">
 						<li>ATC (American Theatre Company, Brussels)</li>
