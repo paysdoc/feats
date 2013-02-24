@@ -14,6 +14,7 @@
 		function doAjax(urlString) {
 			$.ajax({
 				url:urlString,
+                cache:false,
 				beforeSend: function ( xhr ) {
 				    xhr.overrideMimeType("text/html");
 				}
@@ -133,7 +134,7 @@
 	<div id="Footer">
 		<div class="counter">
 			<script language="JavaScript">
-			TargetDate = "5/17/2013 7:30 PM";
+			TargetDate = "5/17/2013 8:30 PM";
 			BackColor = "";
 			ForeColor = "#ffffff";
 			CountActive = true;
@@ -142,7 +143,7 @@
 			DisplayFormat = "Another %%D%% days, %%H%% hours, %%M%% minutes, %%S%% seconds to go";
 			FinishMessage = "It is finally here!";
 			</script>
-			<script language="JavaScript" src="http://scripts.hashemian.com/js/countdown.js"></script>
+			<script language="JavaScript" src="js/countdown.js"></script>
 		</div>
 	</div>
     </div>
