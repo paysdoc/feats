@@ -20,7 +20,7 @@
 			}).done(function data(data, textStatus, xhr) {
 				$("#Content").empty().html(data).css('background', '');
 			}).fail(function error() {
-				alert("FAIL!!");
+                $("#Content").empty().html("404 : Unfortunately the information you're looking for cannot be retrieved").css('background', '');
 			});
 		}
 	</script>
@@ -99,7 +99,7 @@
 			</div>
 		</div>
 		<div id="Info">
-			<div id="Map" onclick="$('#Content').empty().html(mapOnContent());"></div>
+			<div id="Map" onclick="$('#Content').empty().html(mapOnContent().clone()).css('background-color', '');"></div>
 			<div id="Tickets"><div class="box"><p>Season Tickets (4 days) : &euro;70,- pp<br />Per day : &euro;20,- pp</p><p>Tickets will be on sale soon</p></div></div>
 			<div id="Marquee" onclick="$('#Content').empty().html($('#webticker').clone());">
 				<div class="box">
@@ -134,7 +134,7 @@
 		<div class="counter">
 			<script language="JavaScript">
 			TargetDate = "5/17/2013 7:30 PM";
-			BackColor = "#36005c";
+			BackColor = "";
 			ForeColor = "#ffffff";
 			CountActive = true;
 			CountStepper = -1;

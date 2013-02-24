@@ -9,12 +9,12 @@ body {
 }
 #TheWholePage {
 	height: 100%;
-	background-image: -ms-radial-gradient(left top, circle farthest-side, #FFFFFF 0%, #36005C 85%);
-	background-image: -moz-radial-gradient(left top, circle farthest-side, #FFFFFF 0%, #36005C 85%);
-	background-image: -o-radial-gradient(left top, circle farthest-side, #FFFFFF 0%, #36005C 85%);
-	background-image: -webkit-gradient(radial, left top, 0, left top, 970, color-stop(0, #FFFFFF), color-stop(1, #36005C));
-	background-image: -webkit-radial-gradient(left top, circle farthest-side, #FFFFFF 0%, #36005C 85%);
-	background-image: radial-gradient(circle farthest-side at left top, #FFFFFF 0%, #36005C 85%);
+	background-image: -ms-radial-gradient(left top, circle farthest-side, #dab6f3 0%, #36005C 85%);
+	background-image: -moz-radial-gradient(left top, circle farthest-side, #dab6f3 0%, #36005C 85%);
+	background-image: -o-radial-gradient(left top, circle farthest-side, #dab6f3 0%, #36005C 85%);
+	background-image: -webkit-gradient(radial, left top, 0, left top, 970, color-stop(0, #dab6f3), color-stop(1, #36005C));
+	background-image: -webkit-radial-gradient(left top, circle farthest-side, #dab6f3 0%, #36005C 85%);
+	background-image: radial-gradient(circle farthest-side at left top, #dab6f3 0%, #36005C 85%);
 }
 #Header {
 	background: #ffffff url("/img/ks_watermark.png") no-repeat;
