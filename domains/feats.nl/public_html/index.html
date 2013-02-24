@@ -15,7 +15,7 @@
 			$.ajax({
 				url:urlString,
                 cache:false,
-				beforeSend: function ( xhr ) {
+                beforeSend: function ( xhr ) {
 				    xhr.overrideMimeType("text/html");
 				}
 			}).done(function data(data, textStatus, xhr) {
