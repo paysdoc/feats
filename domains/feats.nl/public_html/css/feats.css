@@ -16,6 +16,9 @@ body {
 	background-image: -webkit-radial-gradient(left top, circle farthest-side, #dab6f3 0%, #36005C 85%);
 	background-image: radial-gradient(circle farthest-side at left top, #dab6f3 0%, #36005C 85%);
 }
+.ie8 #TheWholePage {
+    background: #dab6f3;
+}
 #Header {
 	background: #ffffff url("/img/ks_watermark.png") no-repeat;
 	background-size: 100% 100%;
@@ -174,12 +177,12 @@ body {
 	padding: 0 1rem 0 1rem;
 	font-size: 0.8em;
 }
-@media screen and (max-height: 500px) { 
+@media screen and (max-height: 31em) { 
 	html {
 		font-size: 80%;
 	}
 }
-@media screen and (max-width: 950px) { 
+@media screen and (max-width: 60em) { 
 	html {
 		font-size: 80%;
 	}
@@ -187,12 +190,12 @@ body {
 		height:80%;
 	}
 }
-@media screen and (max-height: 400px) { 
+@media screen and (max-height: 25em) { 
 	html {
 		font-size: 60%;
 	}
 }
-@media screen and (max-width: 730px) { 
+@media screen and (max-width: 45em) { 
 	html {
 		font-size: 60%;
 	}
@@ -200,12 +203,12 @@ body {
 		height:60%;
 	}
 }
-@media screen and (max-height: 300px) { 
+@media screen and (max-height: 19em) { 
 	html {
 		font-size: 40%;
 	}
 }
-@media screen and (max-width: 550px) { 
+@media screen and (max-width: 34em) { 
 	html {
 		font-size: 40%;
 	}
