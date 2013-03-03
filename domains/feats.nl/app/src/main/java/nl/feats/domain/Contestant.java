@@ -1,6 +1,7 @@
 package nl.feats.domain;
 
 import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 
 import javax.validation.constraints.NotNull;
 
@@ -10,7 +11,7 @@ import javax.validation.constraints.NotNull;
  * Date: 2/22/13
  * Time: 11:25 PM
  */
-@Data public class TheatreCompany {
+@Data public class Contestant {
     /**
      * name of the company
      */
@@ -21,6 +22,7 @@ import javax.validation.constraints.NotNull;
      * the play to be performed
      */
     @NotNull
+    @DBRef
     private Play play;
 
     /**
