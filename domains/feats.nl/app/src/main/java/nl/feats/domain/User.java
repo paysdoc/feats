@@ -1,7 +1,9 @@
 package nl.feats.domain;
 
 import lombok.Data;
-import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotNull;
 
@@ -12,7 +14,15 @@ import javax.validation.constraints.NotNull;
  * Time: 7:50 PM
  */
 @Data
+@Document
 public class User {
+
+    /**
+     * The id
+     */
+    @Id
+    private ObjectId _id;
+
     /**
      * name of the user
      */
@@ -37,14 +47,9 @@ public class User {
     private String password;
 
     /**
-     * User's group
+     * User's role
      */
-    private String group;
-
-    /**
-     * The theatre company that the user belongs to
-     */
-    @DBRef
-    private Contestant company;
+    @NotNull
+    private String role;
 
 }

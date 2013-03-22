@@ -1,7 +1,10 @@
 package nl.feats.domain;
 
 import lombok.Data;
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotNull;
 
@@ -11,18 +14,25 @@ import javax.validation.constraints.NotNull;
  * Date: 2/22/13
  * Time: 11:25 PM
  */
-@Data public class Contestant {
+@Data
+@Document
+public class Contestant {
+
+    /**
+     * the id
+     */
+    @Id
+    private String id;
+
     /**
      * name of the company
      */
-    @NotNull
+    @NotNull(message = "Please fill in the nema of the theatre company")
     private String name;
 
     /**
      * the play to be performed
      */
-    @NotNull
-    @DBRef
     private Play play;
 
     /**
@@ -38,7 +48,12 @@ import javax.validation.constraints.NotNull;
     /**
      * are there any cast members under the age of 18?
      */
-    private boolean juvenileCast;
+    private boolean juvenileCastMale;
+
+    /**
+     * are there any cast members under the age of 18?
+     */
+    private boolean juvenileCastFemale;
 
     /**
      * Would the company like to get a written adjudication?

@@ -1,7 +1,12 @@
 package nl.feats.domain;
 
 import lombok.Data;
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -10,24 +15,25 @@ import javax.validation.constraints.NotNull;
  * Date: 2/22/13
  * Time: 11:17 PM
  */
-@Data public class Play {
+@Data
+public class Play {
 
     /**
      * The name of the play
      */
-    @NotNull
+    @NotNull(message = "Please state the name of the play")
     private String name;
 
     /**
      * the author
      */
-    @NotNull
+    @NotNull(message = "Please fill in the name of the author")
     private String author;
 
     /**
      * Does the play have copyright restrictions?
      */
-    @NotNull
+    @NotNull(message = "Please state whether the play has copyright")
     private Boolean copyright;
 
     /**
@@ -43,7 +49,7 @@ import javax.validation.constraints.NotNull;
     /**
      * Is this play an original script?
      */
-    @NotNull
+    @NotNull(message = "Please state whether the play is an original script")
     private Boolean originalScript;
 
     /**
@@ -54,7 +60,19 @@ import javax.validation.constraints.NotNull;
     /**
      * duration of the play (in minutes)
      */
-    @NotNull
+    @NotNull(message = "Please fill in the duration of the play")
     private Integer duration;
+
+    /**
+     * Synopsis of the play
+     */
+    @Min(100)
+    @Max(150)
+    private String synopsis;
+
+    /**
+     * Can the company provide copies of the play
+     */
+    private Boolean provideCopies;
 
 }

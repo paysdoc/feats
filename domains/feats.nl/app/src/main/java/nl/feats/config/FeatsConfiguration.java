@@ -4,7 +4,6 @@ import com.mongodb.Mongo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.authentication.UserCredentials;
 import org.springframework.data.mongodb.MongoDbFactory;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
@@ -23,7 +22,9 @@ public class FeatsConfiguration {
 
     @Bean
     public MongoTemplate getMongoTemplate() throws UnknownHostException {
-        MongoDbFactory factory = new SimpleMongoDbFactory(new Mongo(), "feats",new UserCredentials("featsdb", "DahliaPumpkinSalmonShelfSpandex"));
+//        MongoDbFactory factory = new SimpleMongoDbFactory(new Mongo(), "feats",new UserCredentials("featsdb", "DahliaPumpkinSalmonShelfSpandex"));
+        MongoDbFactory factory = new SimpleMongoDbFactory(new Mongo(), "feats");
         return new MongoTemplate(factory);
     }
+
 }

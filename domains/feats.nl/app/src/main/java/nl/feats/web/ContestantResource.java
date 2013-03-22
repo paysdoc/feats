@@ -16,7 +16,7 @@ import javax.ws.rs.*;
  * Time: 1:40 PM
  */
 @Component
-@Path("/performers")
+@Path("/contestants")
 public class ContestantResource {
 
     private final ContestantRepository repo;
@@ -28,29 +28,30 @@ public class ContestantResource {
 
     @PUT
     @Consumes("application/json")
-    public void addPerformance(Contestant contestant) {
+    public void addContestant(Contestant contestant) {
         repo.save(contestant);
     }
 
     @POST
     @Consumes("application/json")
-    public void updatePerformance(Contestant contestant) {
+    public void updateContestant(Contestant contestant) {
         repo.save(contestant);
     }
 
     @DELETE
     @Consumes("application/json")
-    public void deletePerformance(Contestant contestant) {
+    public void deleteContestant(Contestant contestant) {
         repo.delete(contestant);
     }
 
     @GET
     @Produces("application/json")
-    public JSONWithPadding getPerformance(@QueryParam("callback") String callback) {
+    public JSONWithPadding getContestants(@QueryParam("callback") String callback) {
         return new JSONWithPadding(repo.findAll(), callback);
+
     }
 
-    private Contestant[] getPerformances() {
+    private Contestant[] getContestants() {
         return new Contestant[] {getNamingBru(), getPanto4Feats()};
     }
 
@@ -68,7 +69,7 @@ public class ContestantResource {
         company.setName("The Imbeciles");
         company.setMaleCast(2);
         company.setFemaleCast(1);
-        company.setJuvenileCast(true);
+        company.setJuvenileCastMale(true);
         company.setWrittenAdjudication(true);
         company.setPlay(play);
         return company;
@@ -87,7 +88,7 @@ public class ContestantResource {
         company.setName("Funnybone");
         company.setMaleCast(23);
         company.setFemaleCast(14);
-        company.setJuvenileCast(false);
+        company.setJuvenileCastMale(false);
         company.setWrittenAdjudication(true);
         company.setPlay(play);
         return company;
