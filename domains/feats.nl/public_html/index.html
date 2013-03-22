@@ -103,7 +103,7 @@
 		</div>
 		<div id="Info">
 			<div id="Map" onclick="$('#Content').empty().html(mapOnContent().clone()).css('background-color', '');"></div>
-			<div id="Tickets"><div class="box"><p>Season Tickets (4 days) : &euro;70,- pp<br />Per day : &euro;20,- pp</p><p>Tickets will be on sale soon</p></div></div>
+			<div id="Tickets" onclick="doAjax('tickets.html');"><div class="box"><p>Season Tickets (4 days) : &euro;70,- pp<br />Per day : &euro;20,- pp</p><p><a href="#">more...</a></a></p></div></div>
 			<div id="Marquee" onclick="$('#Content').empty().html($('#webticker').clone());">
 				<div class="box">
 					<ul id="webticker">

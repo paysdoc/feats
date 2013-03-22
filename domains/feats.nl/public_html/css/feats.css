@@ -57,7 +57,9 @@ body {
 }
 #Content {
 	margin: 1rem 0 0 0;
-	height: 95%;
+	height: 90%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 #Menu_Landscape {
 	height:100%;
@@ -130,6 +132,7 @@ body {
 }
 #Tickets {
 	font-size: 0.8rem;
+    cursor: pointer;
 }
 .logo {
 	float:left
