@@ -36,7 +36,7 @@
 		<img src="/img/logo_animated.gif" alt="feats animated logo" class="img logo"/>
 		<div class="heading">
 			<h1>Welcome to FEATS 2013</h1>
-			<i>Festival of European Anglophone Theatrical Societies</i>
+			<em>Festival of European Anglophone Theatrical Societies</em>
 		</div>
 		<div class="date">
 			<h2>17 - 20 May</h2>Koninklijke Schouwburg
@@ -45,7 +45,7 @@
 	<div id="Menu">   <!-- Menu buttons for handheld devices -->
 		<div class="menubutton" onclick="doAjax('home.html', '');">
 			<div class="menuitem">
-				<img src="/img/home.png"/>
+				<img src="/img/home.png" alt="home"/>
 			</div>
 		</div>
 		<div class="menubutton" onclick="doAjax('stage_management_docs.html', '');">
@@ -78,7 +78,7 @@
 		<div id="Menu_Container">
 			<div id="Menu_Landscape">
 				<div class="menuitem" onclick="doAjax('home.html', '#ffffff');">
-					<img src="/img/home.png" height="100%"/>
+					<img src="/img/home.png" alt="home" height="100%"/>
 				</div>
 				<div class="menuitem" onclick="doAjax('stage_management_docs.html', '#ffffff');">
 					<div class="menu_text"><strong>Groups</strong><br/>(tech pack, etc...)</div>
@@ -88,17 +88,17 @@
 				</div>
 			</div>
 			<div id="Social">
-                <a href="http://www.facebook.com/groups/248508651916737" target="_blank" class="img" title="follow us on Facebook"><img src="/img/fb.png" height="60%"/></a>
-                <a href="https://twitter.com/FEATStheHague" target="_blank" class="img" title="follow us on Twitter"><img src="/img/tw.png" height="60%"/></a>
-                <a href="https://plus.google.com/107416515521837654668/posts?hl=en" target="_blank" class="img" title="follow us on Google"><img src="/img/gplus.png" height="60%"/></a>
+                <a href="http://www.facebook.com/groups/248508651916737" target="_blank" class="img" title="follow us on Facebook"><img src="/img/fb.png" alt="facebook icon" height="60%"/></a>
+                <a href="https://twitter.com/FEATStheHague" target="_blank" class="img" title="follow us on Twitter"><img src="/img/tw.png" alt="twitter icon" height="60%"/></a>
+                <a href="https://plus.google.com/107416515521837654668/posts?hl=en" target="_blank" class="img" title="follow us on Google"><img src="/img/gplus.png" alt="google icon" height="60%"/></a>
 			</div>
 		</div> 
 		<div id="Content_Container">
-			<div id="Content" class="box"><img src="/img/poster.jpg"/></div>
+			<div id="Content" class="box"><img src="/img/poster.jpg" alt="poster"/></div>
 		</div>
 		<div id="Info">
 			<div id="Map" onclick="$('#Content').empty().html('<div id=&quot;ContentMap&quot;></div>');mapOnContent();"></div>
-			<div id="Tickets" onclick="doAjax('tickets.html', '#ffffff');"><div class="box"><p>Season Tickets (4 days) : &euro;70,- pp<br />Per day : &euro;20,- pp</p><p><a href="#">more...</a></a></p></div></div>
+			<div id="Tickets" onclick="doAjax('tickets.html', '#ffffff');"><div class="box"><p>Season Tickets (4 days) : &euro;70,- pp<br />Per day : &euro;20,- pp</p><p><a href="#">more...</a></p></div></div>
 			<div id="Marquee" onclick="$('#Content').empty().html($('#webticker').clone());">
 				<div class="box">
 					<ul id="webticker">
@@ -122,15 +122,15 @@
 	<div id="Bottom">
 		<div id="Pictures"><div class="box">
 			<div class="par">
-				<div class="cell"><img src="img/theatre_outside.jpg" onmouseover="this.style.cursor='pointer'" onclick="toggle(this, '5px');" onmouseout="diminish(this);"/></div>
-				<div class="cell"><iframe height="100%" src="http://www.youtube.com/embed/ZGjupOtgQ2U" frameborder="0" allowfullscreen></iframe></div>
-				<div class="cell"><img src="img/auditorium.jpg" onmouseover="this.style.cursor='pointer'" onclick="toggle(this, '-522px');" onmouseout="diminish(this);" /></div>
+				<div class="cell"><img src="img/theatre_outside.jpg" alt="theatre facade" onmouseover="this.style.cursor='pointer'" onclick="toggle(this, '5px');" onmouseout="diminish(this);"/></div>
+				<div class="cell"><iframe height="100%" src="http://www.youtube.com/embed/ZGjupOtgQ2U" frameborder="0"></iframe></div>
+				<div class="cell"><img src="img/auditorium.jpg" alt="auditorium" onmouseover="this.style.cursor='pointer'" onclick="toggle(this, '-522px');" onmouseout="diminish(this);" /></div>
 			</div>
 		</div></div>
 	</div>
 	<div id="Footer">
 		<div class="counter">
-			<script language="JavaScript">
+			<script type="text/javascript">
 			TargetDate = "5/17/2013 8:30 PM";
 			BackColor = "";
 			ForeColor = "#ffffff";
@@ -140,7 +140,7 @@
 			DisplayFormat = "Another %%D%% days, %%H%% hours, %%M%% minutes, %%S%% seconds to go";
 			FinishMessage = "It is finally here!";
 			</script>
-			<script language="JavaScript" src="js/countdown.js"></script>
+			<script type="text/javascript" src="js/countdown.js"></script>
 		</div>
 	</div>
     </div>
