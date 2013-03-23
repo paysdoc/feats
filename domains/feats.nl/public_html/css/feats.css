@@ -54,12 +54,34 @@ body {
 	margin: 0;
 	float:right;
 	word-wrap:break-word;
+
+    display:-moz-box;
+    -moz-box-pack:center;
+    -moz-box-align:center;
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    display:box;
+    box-pack:center;
+    box-align:center;
+}
+#ContentMap {
+    height: 100%;
 }
 #Content {
-	margin: 1rem 0 0 0;
+	padding: 1rem;
 	height: 90%;
     overflow-y: auto;
     overflow-x: hidden;
+
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    box-flex:1;
+}
+#Content img {
+    height: 100%;
+    float: left;
+    margin-right: 1rem;
 }
 #Menu_Landscape {
 	height:100%;
@@ -155,7 +177,6 @@ body {
 	margin-bottom: 5px;
 }
 .par {
-	height:100%;
 	font-size: 0.8rem;
 	text-align:center;
 }

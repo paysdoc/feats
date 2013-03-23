@@ -2,6 +2,13 @@ body {
 	background: #000000;
 	color: #ffffff;
 }
+a:link {color:yellow;}      /* unvisited link */
+a:visited {color:#9acd32;}  /* visited link */
+a:hover {color:yellow;}  /* mouse over link */
+a:active {color:yellow;}  /* selected link */
+#Info {
+    display:none;
+}
 #TheWholePage {
 	background: #26005c;
 }
@@ -21,14 +28,29 @@ body {
 	display:block;
 	width:100%;
 	height:12.5%;
-}
-#Info {
-	display:none;
+
+    /* Firefox */
+    display:-moz-box;
+    -moz-box-pack:center;
+    -moz-box-align:center;
+
+    /* Safari, Opera, and Chrome */
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+
+    /* W3C */
+    display:box;
+    box-pack:center;
+    box-align:center;
 }
 #Content_Container {
 	height:100%;
 	width:100%;
 	float:none;
+}
+#Content {
+    overflow: hidden;
 }
 #Bottom {
 	display:none;
@@ -36,25 +58,50 @@ body {
 #Menu_Container{
 	position:absolute;
 	bottom:0;
-	left: 25%;
+    left:0;
+
+    display:-moz-box;
+    -moz-box-pack:center;
+    -moz-box-align:center;
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    display:box;
+    box-pack:center;
+    box-align:center;
+
 }
 .menubutton {
-	float:left;
-	height: 100%;
-	width:16.66%;
-	background-color: #ffffff;
-	margin: 0;
-	padding: 0;
+    height: 100%;
+    width: 16%;
 	cursor: pointer;
+
+    display:-moz-box;
+    -moz-box-pack:center;
+    -moz-box-align:center;
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    display:box;
+    box-pack:center;
+    box-align:center;
+
+    border-style:groove;
+    border-width:1px;
+    border-color:#dab6f3;
 }
 .menuitem {
+    background: #ffffff url("/img/fade.png") repeat-x;
+    background-size: contain;
 	width: 100%;
 	height: 100%;
 	margin: 0;
-	padding: 0;
-	border-style:groove;
-	border-width:2px;
-	border-color:#888888;
+    padding: 0;
+	float: none;
+}
+.menuitem img {
+    padding-top: 1em;
+    width: 90%;
 }
 .menu_text {
 	margin-top: 2em;
@@ -63,10 +110,10 @@ body {
 	display:none;
 }
 #Social {
-	width:100%;
+	width:auto;
 	height:90%;
-	margin-top: 0.5rem;
-	float:left;
+	margin: 0.5rem;
+    float: none;
 }
 .box {
 	background:#26005c;

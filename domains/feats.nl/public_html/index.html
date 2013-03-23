@@ -13,7 +13,7 @@
 	<script type="text/javascript" src="js/functions.js"></script>
 	<script type="text/javascript" src="js/gmap.js"></script>
 	<script type="text/javascript">
-		function doAjax(urlString) {
+		function doAjax(urlString, bg) {
 			$.ajax({
 				url:urlString,
                 cache:false,
@@ -21,9 +21,9 @@
 				    xhr.overrideMimeType("text/html");
 				}
 			}).done(function data(data, textStatus, xhr) {
-				$("#Content").empty().html(data).css('background', '');
+				$("#Content").empty().html(data);
 			}).fail(function error() {
-                $("#Content").empty().html("404 : Unfortunately the information you're looking for cannot be retrieved").css('background', '');
+                $("#Content").empty().html("404 : Unfortunately the information you're looking for cannot be retrieved");
 			});
 		}
 	</script>
@@ -42,33 +42,33 @@
 			<h2>17 - 20 May</h2>Koninklijke Schouwburg
 		</div> 
 	</div>
-	<div id="Menu">
-		<div class="menubutton" onclick="doAjax('home.html');">
+	<div id="Menu">   <!-- Menu buttons for handheld devices -->
+		<div class="menubutton" onclick="doAjax('home.html', '');">
 			<div class="menuitem">
-				<img src="/img/home.png" width="100%"/>
+				<img src="/img/home.png"/>
 			</div>
 		</div>
-		<div class="menubutton" onclick="doAjax('stage_management_docs.html');">
+		<div class="menubutton" onclick="doAjax('stage_management_docs.html', '');">
 			<div class="menuitem">
 				<div class="menu_text"><strong>Tech</strong></div>
 			</div>
 		</div>
-		<div class="menubutton" onclick="doAjax('hospitality_docs.html')">
+		<div class="menubutton" onclick="doAjax('hospitality_docs.html', '')">
 			<div class="menuitem">
 				<div class="menu_text"><strong>Audience</strong></div>
 			</div>
 		</div>
-		<div class="menubutton" onclick="$('#Content').empty().html(mapOnContent());">
+		<div class="menubutton" onclick="$('#Content').empty().html('<div id=&quot;ContentMap&quot;></div>');mapOnContent();">
 			<div class="menuitem">
 				<div class="menu_text"><strong>Map</strong></div>
 			</div>
 		</div>
-		<div class="menubutton" onclick="$('#Content').empty().html($('#webticker').clone()).css('background-color', '');">
+		<div class="menubutton" onclick="$('#Content').empty().html($('#webticker').clone());">
 			<div class="menuitem">
 				<div class="menu_text"><strong>Groups</strong></div>
 			</div>
 		</div>
-		<div class="menubutton" onclick="$('#Content').empty().html($('#Tickets').clone()).css('background-color', '');">
+		<div class="menubutton" onclick="doAjax('tickets.html', '')">
 			<div class="menuitem">
 				<div class="menu_text"><strong>Tickets</strong></div>
 			</div>
@@ -77,33 +77,28 @@
 	<div id="Top">
 		<div id="Menu_Container">
 			<div id="Menu_Landscape">
-				<div class="menuitem" onclick="doAjax('home.html');">
+				<div class="menuitem" onclick="doAjax('home.html', '#ffffff');">
 					<img src="/img/home.png" height="100%"/>
 				</div>
-				<div class="menuitem" onclick="doAjax('stage_management_docs.html');">
+				<div class="menuitem" onclick="doAjax('stage_management_docs.html', '#ffffff');">
 					<div class="menu_text"><strong>Groups</strong><br/>(tech pack, etc...)</div>
 				</div>
-				<div class="menuitem" onclick="doAjax('hospitality_docs.html')">
+				<div class="menuitem" onclick="doAjax('hospitality_docs.html', '#ffffff')">
 					<div class="menu_text"><strong>Audience</strong><br/>(booking info, etc...)</div>
 				</div>
 			</div>
 			<div id="Social">
-				<a href="http://www.facebook.com/groups/248508651916737" target="_blank" class="img" title="follow us on Facebook"><img src="/img/fb.png" height="80%"/></a>
-				<a href="https://twitter.com/FEATStheHague" target="_blank" class="img" title="follow us on Twitter"><img src="/img/tw.png" height="80%"/></a>
-				<a href="https://plus.google.com/107416515521837654668/posts?hl=en" target="_blank" class="img" title="follow us on Google"><img src="/img/gplus.png" height="80%"/></a>
+                <a href="http://www.facebook.com/groups/248508651916737" target="_blank" class="img" title="follow us on Facebook"><img src="/img/fb.png" height="60%"/></a>
+                <a href="https://twitter.com/FEATStheHague" target="_blank" class="img" title="follow us on Twitter"><img src="/img/tw.png" height="60%"/></a>
+                <a href="https://plus.google.com/107416515521837654668/posts?hl=en" target="_blank" class="img" title="follow us on Google"><img src="/img/gplus.png" height="60%"/></a>
 			</div>
 		</div> 
 		<div id="Content_Container">
-			<div id="Content" class="box">
-				<div class="par">
-					<p><strong>FEATS 2013 will be hosted by the <a href="http://www.aatg.nl/"target="_blank"> AATG</a> <br/>and held in The Hague at <a href="http://www.ks.nl/" target="_new">the Koninklijke Schouwburg</a><br/>from the 17th to the 20th of May</strong></p>
-					<p><strong>The AATG are now busy organising FEATS 2013.  </strong></p>
-				</div>
-			</div>
+			<div id="Content" class="box"><img src="/img/poster.jpg"/></div>
 		</div>
 		<div id="Info">
-			<div id="Map" onclick="$('#Content').empty().html(mapOnContent().clone()).css('background-color', '');"></div>
-			<div id="Tickets" onclick="doAjax('tickets.html');"><div class="box"><p>Season Tickets (4 days) : &euro;70,- pp<br />Per day : &euro;20,- pp</p><p><a href="#">more...</a></a></p></div></div>
+			<div id="Map" onclick="$('#Content').empty().html('<div id=&quot;ContentMap&quot;></div>');mapOnContent();"></div>
+			<div id="Tickets" onclick="doAjax('tickets.html', '#ffffff');"><div class="box"><p>Season Tickets (4 days) : &euro;70,- pp<br />Per day : &euro;20,- pp</p><p><a href="#">more...</a></a></p></div></div>
 			<div id="Marquee" onclick="$('#Content').empty().html($('#webticker').clone());">
 				<div class="box">
 					<ul id="webticker">
@@ -150,8 +145,7 @@
 	</div>
     </div>
 <script type="text/javascript">
-	window.onload = loadScript;
-	jQuery('#webticker').webTicker();
+    window.onload = loadScript;
 </script>
 </body>
 </html>

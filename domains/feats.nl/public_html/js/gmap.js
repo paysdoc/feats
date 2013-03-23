@@ -1,19 +1,19 @@
 function init_map() {
-	buildMap("Map");
+	buildMap("Map", true);
 }
 
 function mapOnContent() {
-	buildMap("Content");
+	buildMap("ContentMap", true);
 }
 
-function buildMap(id) {
+function buildMap(id, hybrid) {
 	var ks_ll = new google.maps.LatLng(52.082251,4.315318);
         var mapOptions = {
           center: ks_ll,
           zoom: 8,
 	  disableDefaultUI:true,
 	  overviewMapControl:true,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+          mapTypeId: hybrid ? google.maps.MapTypeId.HYBRID : google.maps.MapTypeId.ROADMAP
         };
         var theMap = new google.maps.Map(document.getElementById(id),
             mapOptions);
@@ -41,9 +41,13 @@ function setMarker(theMap, ks_ll) {
 }
 
 function loadScript() {
-  var script = document.createElement("script");
-  script.type = "text/javascript";
-  script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBbqEBrrrT2xcFHGWTnkYPVU_SzEtXKH6w&sensor=true&callback=init_map";
-  document.body.appendChild(script);
+    doAjax('home.html', '');
+
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBbqEBrrrT2xcFHGWTnkYPVU_SzEtXKH6w&sensor=true&callback=init_map";
+    document.body.appendChild(script);
+
+    jQuery('#webticker').webTicker();
 }
 
