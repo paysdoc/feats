@@ -6,27 +6,8 @@
 	<META http-equiv="Content-Style-Type" content="text/css">
 	<link rel="stylesheet" href="css/feats.css" type="text/css">
 	<link rel="stylesheet" href="css/feats_handheld.css" type="text/css" media="handheld, screen and (max-aspect-ratio:4/5)">
-	<link rel="stylesheet" href="css/feats_5_3.css" type="text/css" media="screen and (min-aspect-ratio:5/3)">
-	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
-	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="js/jquery.webticker.js"></script>
-	<script type="text/javascript" src="js/functions.js"></script>
-	<script type="text/javascript" src="js/gmap.js"></script>
-	<script type="text/javascript">
-		function doAjax(urlString, bg) {
-			$.ajax({
-				url:urlString,
-                cache:false,
-                beforeSend: function ( xhr ) {
-				    xhr.overrideMimeType("text/html");
-				}
-			}).done(function data(data, textStatus, xhr) {
-				$("#Content").empty().html(data);
-			}).fail(function error() {
-                $("#Content").empty().html("404 : Unfortunately the information you're looking for cannot be retrieved");
-			});
-		}
-	</script>
+    <link rel="stylesheet" href="css/feats_5_3.css" type="text/css" media="screen and (min-aspect-ratio:5/3)">
+	<script  data-main="js/main" src="js/lib/require.js"></script>
 
 </head>
 
@@ -43,22 +24,22 @@
 		</div> 
 	</div>
 	<div id="Menu">   <!-- Menu buttons for handheld devices -->
-		<div class="menubutton" onclick="doAjax('home.html', '');">
+		<div class="menubutton" onclick="require('app').doAjax('js/temp/home.html');">
 			<div class="menuitem">
 				<img src="/img/home.png" alt="home"/>
 			</div>
 		</div>
-		<div class="menubutton" onclick="doAjax('stage_management_docs.html', '');">
+		<div class="menubutton" onclick="require('app').doAjax('js/temp/stage_management_docs.html');">
 			<div class="menuitem">
 				<div class="menu_text"><strong>Tech</strong></div>
 			</div>
 		</div>
-		<div class="menubutton" onclick="doAjax('hospitality_docs.html', '')">
+		<div class="menubutton" onclick="require('app').doAjax('js/temp/hospitality_docs.html')">
 			<div class="menuitem">
 				<div class="menu_text"><strong>Audience</strong></div>
 			</div>
 		</div>
-		<div class="menubutton" onclick="$('#Content').empty().html('<div id=&quot;ContentMap&quot;></div>');mapOnContent();">
+		<div class="menubutton" onclick="$('#Content').empty().html('<div id=&quot;ContentMap&quot;></div>');require('gmap').mapOnContent();">
 			<div class="menuitem">
 				<div class="menu_text"><strong>Map</strong></div>
 			</div>
@@ -68,7 +49,7 @@
 				<div class="menu_text"><strong>Groups</strong></div>
 			</div>
 		</div>
-		<div class="menubutton" onclick="doAjax('tickets.html', '')">
+		<div class="menubutton" onclick="require('app').doAjax('js/temp/tickets.html')">
 			<div class="menuitem">
 				<div class="menu_text"><strong>Tickets</strong></div>
 			</div>
@@ -77,13 +58,13 @@
 	<div id="Top">
 		<div id="Menu_Container">
 			<div id="Menu_Landscape">
-				<div class="menuitem" onclick="doAjax('home.html', '#ffffff');">
+				<div class="menuitem" onclick="doAjax('js/temp/home.html');">
 					<img src="/img/home.png" alt="home" height="100%"/>
 				</div>
-				<div class="menuitem" onclick="doAjax('stage_management_docs.html', '#ffffff');">
+				<div class="menuitem" onclick="app.doAjax('js/temp/stage_management_docs.html');">
 					<div class="menu_text"><strong>Groups</strong><br/>(tech pack, etc...)</div>
 				</div>
-				<div class="menuitem" onclick="doAjax('hospitality_docs.html', '#ffffff')">
+				<div class="menuitem" onclick="require('app').doAjax('js/temp/hospitality_docs.html')">
 					<div class="menu_text"><strong>Audience</strong><br/>(booking info, etc...)</div>
 				</div>
 			</div>
@@ -97,8 +78,8 @@
 			<div id="Content" class="box"><img src="/img/poster.jpg" alt="poster"/></div>
 		</div>
 		<div id="Info">
-			<div id="Map" onclick="$('#Content').empty().html('<div id=&quot;ContentMap&quot;></div>');mapOnContent();"></div>
-			<div id="Tickets" onclick="doAjax('tickets.html', '#ffffff');"><div class="box"><p>Season Tickets (4 days) : &euro;70,- pp<br />Per day : &euro;20,- pp</p><p><a href="#">more...</a></p></div></div>
+			<div id="Map" onclick="$('#Content').empty().html('<div id=&quot;ContentMap&quot;></div>');require('gmap').mapOnContent();"></div>
+			<div id="Tickets" onclick="require('app').doAjax('js/temp/tickets.html');"><div class="box"><p>Season Tickets (4 days) : &euro;70,- pp<br />Per day : &euro;20,- pp</p><p><a href="#">more...</a></p></div></div>
 			<div id="Marquee" onclick="$('#Content').empty().html($('#webticker').clone());">
 				<div class="box">
 					<ul id="webticker">
@@ -140,12 +121,9 @@
 			DisplayFormat = "Another %%D%% days, %%H%% hours, %%M%% minutes, %%S%% seconds to go";
 			FinishMessage = "It is finally here!";
 			</script>
-			<script type="text/javascript" src="js/countdown.js"></script>
+			<script type="text/javascript" src="js/lib/countdown.js"></script>
 		</div>
 	</div>
     </div>
-<script type="text/javascript">
-    window.onload = loadScript;
-</script>
 </body>
 </html>

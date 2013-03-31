@@ -1,0 +1,49 @@
+#TabbedContent {
+    margin: -0.05rem auto 0 auto;
+    width:100%;
+    height: 100%;
+    border: 1px #ab5ee1 solid;
+}
+#TabbedBox {
+    height: 100%;
+}
+#TabbedBox h4 {
+    margin: 0 0 0.5rem 0;
+}
+.tabbed_area {
+    height: 90%;
+}
+.tabs {
+    margin: 0rem;
+    padding: 0rem;
+}
+.tabs li {
+    list-style: none;
+    display: inline;
+}
+.tab {
+    border-top: 1px #ab5ee1 solid;
+    border-right: 1px #ab5ee1 solid;
+    border-left: 1px #ab5ee1 solid;
+    background: #c399e0;
+    color: #ffffff;
+    background-image: -ms-linear-gradient(top, #c399e0 0%, #36005c 100%);
+    background-image: -moz-linear-gradient(top, #c399e0 0%, #36005c 100%);
+    background-image: -o-linear-gradient(top, #c399e0 0%, #36005c 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c399e0), color-stop(1, #36005C));
+    background-image: -webkit-linear-gradient(top, #c399e0 0%, #36005c 100%);
+    background-image: linear-gradient(top, #c399e0 0%, #36005c 100%);
+    text-decoration:none;
+    padding: 0 0.2rem 0 0.2rem;
+    margin-right: -0.25rem;
+}
+.active {
+    background: #ffffff;
+    color: #46005c;
+    background-image: -ms-linear-gradient(bottom, #c399e0 0%, #ffffff 100%);
+    background-image: -moz-linear-gradient(bottom, #c399e0 0%, #ffffff 100%);
+    background-image: -o-linear-gradient(bottom, #c399e0 0%, #ffffff 100%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #c399e0), color-stop(1, #ffffff));
+    background-image: -webkit-linear-gradient(bottom, #c399e0 0%, #ffffff 100%);
+    background-image: linear-gradient(bottom, #c399e0 0%, #ffffff 100%);
+}
