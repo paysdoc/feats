@@ -104,7 +104,13 @@ body {
 	cursor: pointer;
 }
 .menu_text {
-	margin-top: 0.2rem;
+    float: left;
+    width: 66%;
+    text-align: center;
+}
+.menu_img {
+    float: left;
+    width: 33%;
 }
 #Social {
 	width:23.33%;
@@ -200,6 +206,19 @@ body {
 	margin: 1.5rem 0 0 0;
 	padding: 0 1rem 0 1rem;
 	font-size: 0.8em;
+}
+.clickable {
+    cursor: pointer;
+}
+.notice {
+    border: 1px #56008c solid;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    color: red;
+}
+#Content .notice img {
+    height: 4rem;
 }
 @media screen and (max-height: 31em) { 
 	html {
