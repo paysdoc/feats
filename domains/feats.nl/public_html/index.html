@@ -63,7 +63,7 @@
                 <img src="/img/map.svg" alt="map"/>
 			</div>
 		</div>
-		<div class="menubutton" onclick="$('#Content').empty().html($('#webticker').clone());">
+		<div class="menubutton" onclick="$('#Content').empty().html('<h2>This year\'s Contestants are</h2>').append($('#webticker').clone());">
 			<div class="menuitem">
                 <img src="/img/contestants.svg" alt="contestants"/>
 			</div>
@@ -99,7 +99,7 @@
 		<div id="Info">
 			<div id="Map" onclick="$('#Content').empty().html('<div id=&quot;ContentMap&quot;></div>');mapOnContent();"></div>
 			<div id="Tickets" onclick="doAjax('tickets.html', '#ffffff');"><div class="box"><p>Season Tickets (4 days) : &euro;70,- pp<br />Per day : &euro;20,- pp</p><p><a href="#">more...</a></p></div></div>
-			<div id="Marquee" onclick="$('#Content').empty().html($('#webticker').clone());">
+			<div id="Marquee" onclick="$('#Content').empty().html('<h2>This year\'s Contestants are</h2>').append($('#webticker').clone());">
 				<div class="box">
 					<ul id="webticker">
 						<li>ATC (American Theatre Company, Brussels)</li>
