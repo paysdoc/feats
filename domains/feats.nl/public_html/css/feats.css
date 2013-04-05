@@ -100,8 +100,11 @@ body {
 	color: #56008c;
 	background-color: #ffffff;
 	margin: 1rem 1rem 0 0;
-	padding: 0 2rem 0 2rem;
+	padding: 0 2rem 0 0;
 	cursor: pointer;
+}
+.menuitem img {
+    height: 4rem;
 }
 .menu_text {
     float: left;
@@ -111,6 +114,10 @@ body {
 .menu_img {
     float: left;
     width: 33%;
+}
+.menu_img img {
+    height: 2rem;
+    margin-right: 1rem
 }
 #Social {
 	width:23.33%;
