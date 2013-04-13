@@ -26,46 +26,46 @@
 	<div id="Menu">   <!-- Menu buttons for handheld devices -->
 		<div class="menubutton" onclick="require('app').doAjax('js/temp/home.html');">
 			<div class="menuitem">
-				<img src="/img/home.png" alt="home"/>
+				<img src="/img/home.svg" alt="home"/>
 			</div>
 		</div>
 		<div class="menubutton" onclick="require('app').doAjax('js/temp/stage_management_docs.html');">
 			<div class="menuitem">
-				<div class="menu_text"><strong>Tech</strong></div>
+                <img src="/img/groups.svg" alt="groups"/>
 			</div>
 		</div>
 		<div class="menubutton" onclick="require('app').doAjax('js/temp/hospitality_docs.html')">
 			<div class="menuitem">
-				<div class="menu_text"><strong>Audience</strong></div>
+                <img src="/img/audience.svg" alt="audience"/>
 			</div>
 		</div>
 		<div class="menubutton" onclick="$('#Content').empty().html('<div id=&quot;ContentMap&quot;></div>');require('gmap').mapOnContent();">
 			<div class="menuitem">
-				<div class="menu_text"><strong>Map</strong></div>
+                <img src="/img/map.svg" alt="map"/>
 			</div>
 		</div>
-		<div class="menubutton" onclick="$('#Content').empty().html($('#webticker').clone());">
+		<div class="menubutton" onclick="$('#Content').empty().html('<h2>This year\'s Contestants are</h2>').append($('#webticker').clone());">
 			<div class="menuitem">
-				<div class="menu_text"><strong>Groups</strong></div>
+                <img src="/img/contestants.svg" alt="contestants"/>
 			</div>
 		</div>
 		<div class="menubutton" onclick="require('app').doAjax('js/temp/tickets.html')">
 			<div class="menuitem">
-				<div class="menu_text"><strong>Tickets</strong></div>
+                <img src="/img/tickets.svg" alt="tickets"/>
 			</div>
 		</div>
 	</div>
 	<div id="Top">
 		<div id="Menu_Container">
 			<div id="Menu_Landscape">
-				<div class="menuitem" onclick="doAjax('js/temp/home.html');">
-					<img src="/img/home.png" alt="home" height="100%"/>
+				<div class="menuitem" onclick="doAjax('home.html', '#ffffff');">
+                    <div class="menu_img"><img src="/img/home.svg" alt="home" height="100%"/></div><div class="menu_text"><strong>Home</strong></div>
 				</div>
-				<div class="menuitem" onclick="app.doAjax('js/temp/stage_management_docs.html');">
-					<div class="menu_text"><strong>Groups</strong><br/>(tech pack, etc...)</div>
+				<div class="menuitem" onclick="doAjax('stage_management_docs.html', '#ffffff');">
+                    <div class="menu_img"><img src="/img/groups.svg" alt="home" height="100%"/></div><div class="menu_text"><strong>Groups</strong></div>
 				</div>
-				<div class="menuitem" onclick="require('app').doAjax('js/temp/hospitality_docs.html')">
-					<div class="menu_text"><strong>Audience</strong><br/>(booking info, etc...)</div>
+				<div class="menuitem" onclick="doAjax('hospitality_docs.html', '#ffffff')">
+                    <div class="menu_img"><img src="/img/audience.svg" alt="home" height="100%"/></div><div class="menu_text"><strong>Audience</strong></div>
 				</div>
 			</div>
 			<div id="Social">
@@ -80,7 +80,7 @@
 		<div id="Info">
 			<div id="Map" onclick="$('#Content').empty().html('<div id=&quot;ContentMap&quot;></div>');require('gmap').mapOnContent();"></div>
 			<div id="Tickets" onclick="require('app').doAjax('js/temp/tickets.html');"><div class="box"><p>Season Tickets (4 days) : &euro;70,- pp<br />Per day : &euro;20,- pp</p><p><a href="#">more...</a></p></div></div>
-			<div id="Marquee" onclick="$('#Content').empty().html($('#webticker').clone());">
+			<div id="Marquee" onclick="$('#Content').empty().html('<h2>This year\'s Contestants are</h2>').append($('#webticker').clone());">
 				<div class="box">
 					<ul id="webticker">
 						<li>ATC (American Theatre Company, Brussels)</li>
