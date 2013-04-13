@@ -1,9 +1,9 @@
 //Filename: app.js
 define([
     'jQuery'
-], function () {
-    var app = function ($) {
-        var doAjax = function (urlString) {
+], function ($) {
+    return {
+        doAjax: function (urlString) {
             $.ajax({
                 url: urlString,
                 cache: false,
@@ -15,17 +15,17 @@ define([
                 }).fail(function error() {
                     $("#Content").empty().html("404 : Unfortunately the information you're looking for cannot be retrieved...");
                 });
-        };
+        },
 
-        var toggle = function (elem, marginLeft) {
+        toggle: function (elem, marginLeft) {
             if (elem.style.marginTop == "-100%") {
-                diminish(elem);
+                this.diminish(elem);
             } else {
-                enlarge(elem, marginLeft);
+                this.enlarge(elem, marginLeft);
             }
-        };
+        },
 
-        var enlarge = function (elem, marginLeft) {
+        enlarge: function (elem, marginLeft) {
             var anim = {
                 height: "300%",
                 position: "absolute",
@@ -35,9 +35,9 @@ define([
             };
             anim["marginLeft"] = marginLeft;
             $(elem).animate(anim, 1000);
-        };
+        },
 
-        var diminish = function (elem) {
+        diminish: function (elem) {
             $(elem).animate({
                 position: "relative",
                 top: "auto",
@@ -47,10 +47,10 @@ define([
                 marginTop: "0px",
                 zIndex: "0"
             }, 1000);
-        };
+        },
 
-        var loadScript = function () {
-            doAjax('js/temp/home.html');
+        loadScript: function () {
+            this.doAjax('js/temp/home.html');
 
             var script = document.createElement("script");
             script.type = "text/javascript";
@@ -58,12 +58,10 @@ define([
             document.body.appendChild(script);
 
             $('#webticker').webTicker();
-        }
+        },
 
-        function initialise() {
-            document.onload = loadScript();
+        initialise : function () {
+            document.onload = this.loadScript();
         }
-
-        return new app();
     }
 });
