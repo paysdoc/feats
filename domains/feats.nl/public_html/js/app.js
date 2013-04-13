@@ -1,6 +1,6 @@
 //Filename: app.js
 define([
-    'jQuery'
+    'jQuery', 'webTicker'
 ], function ($) {
     return {
         doAjax: function (urlString) {
@@ -54,7 +54,7 @@ define([
 
             var script = document.createElement("script");
             script.type = "text/javascript";
-            script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBbqEBrrrT2xcFHGWTnkYPVU_SzEtXKH6w&sensor=true";
+            script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBbqEBrrrT2xcFHGWTnkYPVU_SzEtXKH6w&sensor=true&callback=gmap.init_map";
             document.body.appendChild(script);
 
             $('#webticker').webTicker();

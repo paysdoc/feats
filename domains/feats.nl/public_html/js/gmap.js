@@ -1,16 +1,16 @@
-define(['async!https://maps.googleapis.com/maps/api/js?key=AIzaSyBbqEBrrrT2xcFHGWTnkYPVU_SzEtXKH6w&sensor=true!callback'], function(){
-    var gmap = function() {
+define(function(){
+    return {
+        init_map: function() {
+            this.buildMap("Map", true);
+        },
 
-        var init_map = function () {
-            buildMap("Map", true);
-        }
+        mapOnContent: function() {
+            this.buildMap("ContentMap", true);
+        },
 
-        var mapOnContent = function () {
-            buildMap("ContentMap", true);
-        }
-
-        var buildMap = function (id, hybrid) {
+        buildMap: function (id, hybrid) {
             var ks_ll = new google.maps.LatLng(52.082251,4.315318);
+            var that = this;
             var mapOptions = {
                 center: ks_ll,
                 zoom: 8,
@@ -22,11 +22,11 @@ define(['async!https://maps.googleapis.com/maps/api/js?key=AIzaSyBbqEBrrrT2xcFHG
                 mapOptions);
 
             setTimeout(function() {
-                setMarker(theMap, ks_ll);
+                that.setMarker(theMap, ks_ll);
             }, 200);
-        }
+        },
 
-        var setMarker = function (theMap, ks_ll) {
+        setMarker: function (theMap, ks_ll) {
             var marker = new google.maps.Marker({
                 position: ks_ll,
                 map: theMap,
@@ -43,6 +43,5 @@ define(['async!https://maps.googleapis.com/maps/api/js?key=AIzaSyBbqEBrrrT2xcFHG
             });
         }
     };
-    return gmap;
 });
 

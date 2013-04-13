@@ -26,8 +26,8 @@ require.config({
 });
 
 require([
-    'app'
-], function(app){
-    window.app = app;
+    'app', 'gmap'
+], function(app, gmap){
+    window.gmap = gmap;
     app.initialise();
 });
