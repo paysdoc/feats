@@ -1,12 +1,13 @@
-var TabbedArea = Backbone.Model.extend({
-    html : '<link rel="stylesheet" href="css/tabbed.css" type="text/css"><div id="TabbedBox" class="tabbed_box"><h4></h4><div class="tabbed_area"><ul class="tabs"></ul><div id="TabbedContent"></div></div></div>'
-});
+define(["backbone", "underscore"], function(Backbone, _) {
 
-var Tab = Backbone.Model.extend({
-    name: "dummy name",
-    content: "dummy content"
-});
+    return Backbone.Collection.extend({
 
-var Tabs = Backbone.Collection.extend({
-    model: Tab
+        initialize : function(models) {
+            var self = this;
+            _(models).each(function(item) {
+                self.add(item);
+            })
+        }
+    });
+
 });

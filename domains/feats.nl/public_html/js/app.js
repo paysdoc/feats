@@ -3,7 +3,12 @@ define([
     'jQuery', 'webTicker'
 ], function ($) {
     return {
-        doAjax: function (urlString) {
+        fillContent: function (urlString) {
+            this.doAjax(urlString, function(data) {$("#Content").empty().html(data);});
+        },
+
+        doAjax: function (urlString, callback) {
+            var result = "";
             $.ajax({
                 url: urlString,
                 cache: false,
@@ -11,10 +16,11 @@ define([
                     xhr.overrideMimeType("text/html");
                 }
             }).done(function data(data, textStatus, xhr) {
-                    $("#Content").empty().html(data);
+                    callback(data);
                 }).fail(function error() {
-                    $("#Content").empty().html("404 : Unfortunately the information you're looking for cannot be retrieved...");
+                    callback("404 : Unfortunately the information you're looking for cannot be retrieved...");
                 });
+            return result;
         },
 
         toggle: function (elem, marginLeft) {
@@ -50,7 +56,7 @@ define([
         },
 
         loadScript: function () {
-            this.doAjax('js/temp/home.html');
+            this.fillContent('js/temp/home.html');
 
             var script = document.createElement("script");
             script.type = "text/javascript";
