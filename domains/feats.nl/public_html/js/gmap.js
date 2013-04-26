@@ -10,7 +10,7 @@ define(function(){
 
         buildMap: function (id, hybrid) {
             var ks_ll = new google.maps.LatLng(52.082251,4.315318);
-            var that = this;
+            var self = this;
             var mapOptions = {
                 center: ks_ll,
                 zoom: 8,
@@ -22,7 +22,7 @@ define(function(){
                 mapOptions);
 
             setTimeout(function() {
-                that.setMarker(theMap, ks_ll);
+                self.setMarker(theMap, ks_ll);
             }, 200);
         },
 

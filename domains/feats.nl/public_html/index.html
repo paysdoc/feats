@@ -34,7 +34,7 @@
                 <img src="/img/groups.svg" alt="groups"/>
 			</div>
 		</div>
-		<div class="menubutton" onclick="require('app').fillContent('js/temp/hospitality_docs.html')">
+		<div class="menubutton" onclick="require(['view/HospitalityView', 'view/TabbedView', 'model/TabCollection'], function (hospitalityView, tabView, tabCollection){hospitalityView.render(tabView, tabCollection);})">
 			<div class="menuitem">
                 <img src="/img/audience.svg" alt="audience"/>
 			</div>
@@ -64,7 +64,7 @@
 				<div class="menuitem" onclick="require('app').fillContent('js/temp/stage_management_docs.html');">
                     <div class="menu_img"><img src="/img/groups.svg" alt="home" height="100%"/></div><div class="menu_text"><strong>Groups</strong></div>
 				</div>
-				<div class="menuitem" onclick="require('app').fillContent('js/temp/hospitality_docs.html')">
+				<div class="menuitem" onclick="require(['view/HospitalityView', 'view/TabView', 'model/TabCollection'], function (hospitalityView, tabView, tabCollection){hospitalityView.render(tabView, tabCollection);})">
                     <div class="menu_img"><img src="/img/audience.svg" alt="home" height="100%"/></div><div class="menu_text"><strong>Audience</strong></div>
 				</div>
 			</div>

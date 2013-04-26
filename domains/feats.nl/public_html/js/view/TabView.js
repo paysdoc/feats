@@ -44,7 +44,7 @@ define(['jQuery', 'underscore', 'backbone'], function ($, _, Backbone) {
         },
 
         render: function (tabs) {
-            $(this.el).empty().append('<link rel="stylesheet" href="/css/tabbed.css" type="text/css"><div id="TabbedBox" class="tabbed_box"><h4></h4><div class="tabbed_area"><ul class="tabs"></ul><div id="TabbedContent"></div></div></div>');
+            $(this.el).empty().append('<link rel="stylesheet" href="/css/tabbed.css" type="text/css"><div id="TabbedBox" class="tabbed_box"><div class="tabbed_area"><ul class="tabs"></ul><div id="TabbedContent"></div></div></div>');
             var self = this;
             _(tabs.models).each(function (item, index) {
                 self.addTab(item, index);
