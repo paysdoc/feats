@@ -19,7 +19,7 @@ a:active {color:yellow;}  /* selected link */
 #Top {
 	margin: 0;
 	padding: 0;
-	height:67.5%%;
+	height:67.5%;
 }
 #Footer {
 	display:none;
@@ -50,7 +50,7 @@ a:active {color:yellow;}  /* selected link */
 	float:none;
 }
 #Content {
-    overflow: hidden;
+    overflow: auto;
 }
 #Bottom {
 	display:none;
@@ -102,6 +102,7 @@ a:active {color:yellow;}  /* selected link */
 .menuitem img {
     padding-top: 1em;
     width: 90%;
+    height: 90%;
 }
 .menu_text {
 	margin-top: 2em;
