@@ -17,9 +17,7 @@ define(['jQuery', 'underscore', 'backbone'], function ($, _, Backbone) {
         renderContent: function () {
             var theContent = this.model.get("content");
             if (theContent === undefined) {
-                require('app').doAjax(this.model.get("urlString"), function (data) {
-                    $('#TabbedContent').empty().html(data);
-                });
+                require('app').fillContent(this.model.get("urlString"), '#TabbedContent');
             } else {
                 $('#TabbedContent').empty().html(theContent);
             }

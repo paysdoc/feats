@@ -3,8 +3,16 @@ define([
     'jQuery', 'webTicker'
 ], function ($) {
     return {
-        fillContent: function (urlString) {
-            this.doAjax(urlString, function(data) {$("#Content").empty().html(data);});
+        fillContent: function (urlString, elem) {
+            elem = elem === undefined ? "#Content" : elem;
+            this.doAjax(urlString, function(data) {
+                try {
+                    var json = $.parseJSON(data);
+                    $(elem).empty().html(json.get("404"));
+                } catch (e) {
+                    $(elem).empty().html(data);
+                }
+            });
         },
 
         doAjax: function (urlString, callback) {
@@ -18,7 +26,7 @@ define([
             }).done(function data(data, textStatus, xhr) {
                     callback(data);
                 }).fail(function error() {
-                    callback("404 : Unfortunately the information you're looking for cannot be retrieved...");
+                    callback({"404" : "Unfortunately the information you're looking for cannot be retrieved..."});
                 });
             return result;
         },
@@ -56,7 +64,7 @@ define([
         },
 
         loadScript: function () {
-            this.fillContent('js/temp/home.html');
+            this.fillContent('home.html');
 
             var script = document.createElement("script");
             script.type = "text/javascript";
