@@ -7,14 +7,13 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="450"
    height="450"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="groups.svg">
   <defs
      id="defs4">
@@ -34,16 +33,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="222.24276"
-     inkscape:cy="534.64262"
+     inkscape:zoom="0.7"
+     inkscape:cx="194.51036"
+     inkscape:cy="191.544"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="718"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-width="1680"
+     inkscape:window-height="989"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -53,7 +52,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -62,21 +61,6 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-602.3622)">
-    <path
-       style="fill:#aa87de;stroke:none"
-       d="m 209.94886,761.94189 31.32535,-15.99576 39.6787,-9.356 29.49802,-11.92137"
-       id="path4354"
-       inkscape:path-effect="#path-effect4356"
-       inkscape:original-d="m 209.94886,761.94189 c 10.44179,-5.33192 22.05826,-11.26742 31.32535,-15.99576 3.45569,-2.45307 37.65179,-7.56164 39.6787,-9.356 4.04619,-0.85514 28.71489,-12.42435 29.49802,-11.92137"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccc" />
-    <image
-       y="626.30878"
-       x="6.8731256"
-       id="image4440"
-       xlink:href="file:///home/martin/Downloads/masks.jpg"
-       height="389.45691"
-       width="436.7818" />
     <g
        id="g4506">
       <path

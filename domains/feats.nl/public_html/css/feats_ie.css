@@ -1,0 +1,93 @@
+#TheWholePage {
+    background-color: #36005C;
+    background-image: url('/img/ie_background.png');
+    background-repeat: no-repeat;
+}
+.ie #Content {
+    padding: 1em;
+}
+.ie #Content img {
+    margin-right: 1em;
+}
+.ie .menuitem {
+    font-size: 0.8em;
+    margin: 0.5em 1em 0.5em 0;
+    padding: 0 2em 0 0;
+    box-shadow:  0.1rem 0.1em 0.1em #56008C;
+}
+.ie .menuitem img {
+    height: 2em;
+    width: 2em;
+}
+.ie .menu_img img {
+    margin-right: 1em
+}
+.ie #Social-icons {
+    margin-top: 1em;
+}
+.ie #Map {
+    margin: 1em 0 0 0;
+}
+.ie .tickercontainer {
+    height: 2.5em;
+}
+.ie .tickercontainer .mask {
+    top: 0.7em;
+    height: 1.1em;
+}
+.ie #Marquee ul.newsticker li {
+    padding-right: 2em;
+}
+.ie #Tickets {
+    font-size: 0.8em;
+}
+.ie #HolidayInn {
+    height: 2.5em;
+    margin: 1.5em 0 0 0;
+}
+.ie .par {
+    font-size: 0.8em;
+}
+.ie .cell img {
+    margin-left: 2em;
+    max-width: 15em;
+}
+.ie .box {
+    margin: 1.5em 0 0 0;
+    padding: 0 1em 0 1rem;
+}
+.ie .notice {
+    margin: 0 0 1em 0;
+    font-size: 1.5em;
+    height: 4em;
+}
+.ie .audience_svg{
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/audience.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='/img/audience.png', sizingMethod='scale')";
+}
+.ie .contestants_svg{
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/contestants.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/contestants.png', sizingMethod='scale')";
+}
+.ie .groups_svg{
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/groups.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/groups.png', sizingMethod='scale')";
+}
+.ie .home_svg{
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/home.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/home.png', sizingMethod='scale')";
+}
+.ie .map_svg{
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/map.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/map.png', sizingMethod='scale')";
+}
+.ie .tickets_svg{
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/tickets.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/tickets.png', sizingMethod='scale')";
+}
+.ie #HolidayInn img {
+    height: auto;
+}
+.ie .notice {
+    height: 2.5em;
+}

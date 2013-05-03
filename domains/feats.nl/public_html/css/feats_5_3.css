@@ -54,6 +54,10 @@
 	color: #ccadf4;
 	background-color: #333333;
 }
+.menu_img {
+    height: 100%;
+    width: auto;
+}
 .menu_text {
 	margin-top: 0.2rem;
 }

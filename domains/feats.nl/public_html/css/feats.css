@@ -7,6 +7,9 @@ body {
 	margin:0;
 	padding:0;
 }
+img {
+    border: 0;
+}
 #TheWholePage {
 	height: 100%;
 	background-image: -ms-radial-gradient(left top, circle farthest-side, #dab6f3 0%, #36005C 85%);
@@ -115,10 +118,31 @@ body {
 .menu_img {
     float: left;
     width: 33%;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .menu_img img {
-    height: 2rem;
+    width: 2rem;  /* TODO check whether this is needed */
     margin-right: 1rem
+}
+.audience_svg {
+    background-image: url('/img/audience.svg');
+}
+.contestants_svg {
+    background-image: url('/img/contestants.svg');
+}
+.groups_svg {
+    background-image: url('/img/groups.svg');
+}
+.home_svg {
+    background-image: url('/img/home.svg');
+}
+.map_svg {
+    background-image: url('/img/map.svg');
+}
+.tickets_svg {
+    background-image: url('/img/tickets.svg');
 }
 #Social {
 	width:23.33%;
@@ -174,6 +198,9 @@ body {
     height: 2.5rem;
     margin: 1.5rem 0 0 0;
 }
+#HolidayInn img {
+    height: 100%;
+}
 .logo {
 	float:left
 }
@@ -228,11 +255,11 @@ body {
     margin: 0 0 1rem 0;
     font-size: 1.5rem;
     color: red;
-}
-#Content .notice img {
     height: 4rem;
 }
-@media screen and (max-height: 31em) { 
+
+/* resizing */
+@media screen and (max-height: 31em) {
 	html {
 		font-size: 80%;
 	}

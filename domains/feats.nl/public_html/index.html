@@ -1,10 +1,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!--[if IE]><![endif]-->
-<!--[if IE 8 ]>    <html class="ie8">    <![endif]-->
-<!--[if (gt IE 8)|!(IE)]><!--><html><!--<![endif]-->
+<!--[if lte IE 8 ]>    <html class="ie">    <![endif]-->
+<!--[if !(IE)]><!-->
+<html>
+<script>
+    if (/*@cc_on!@*/false) {
+        document.documentElement.className += " ie10";
+    }
+</script>
+<!--<![endif]-->
 <head>
 	<META http-equiv="Content-Style-Type" content="text/css">
 	<link rel="stylesheet" href="css/feats.css" type="text/css">
+    <!--[if IE]><link rel="stylesheet" href="css/feats_ie.css" type="text/css"><![endif]-->
 	<link rel="stylesheet" href="css/feats_handheld.css" type="text/css" media="handheld, screen and (max-aspect-ratio:4/5)">
     <link rel="stylesheet" href="css/feats_5_3.css" type="text/css" media="screen and (min-aspect-ratio:5/3)">
 	<script  data-main="js/main" src="js/lib/require.js"></script>
@@ -25,32 +32,32 @@
 	</div>
 	<div id="Menu">   <!-- Menu buttons for handheld devices -->
 		<div class="menubutton" onclick="require('app').fillContent('home.html');">
-			<div class="menuitem">
+			<div class="menuitem home_svg">
 				<img src="/img/home.svg" alt="home"/>
 			</div>
 		</div>
 		<div class="menubutton" onclick="require('app').fillContent('stage_management_docs.html');">
-			<div class="menuitem">
+			<div class="menuitem groups_svg">
                 <img src="/img/groups.svg" alt="groups"/>
 			</div>
 		</div>
 		<div class="menubutton" onclick="require(['view/HospitalityView', 'view/TabbedView', 'model/TabCollection'], function (hospitalityView, tabView, tabCollection){hospitalityView.render(tabView, tabCollection);})">
-			<div class="menuitem">
+			<div class="menuitem audience_svg">
                 <img src="/img/audience.svg" alt="audience"/>
 			</div>
 		</div>
 		<div class="menubutton" onclick="$('#Content').empty().html('<div id=&quot;ContentMap&quot;></div>');require('gmap').mapOnContent();">
-			<div class="menuitem">
+			<div class="menuitem map_svg">
                 <img src="/img/map.svg" alt="map"/>
 			</div>
 		</div>
 		<div class="menubutton" onclick="$('#Content').empty().html('<h2>This year\'s Contestants are</h2>').append($('#webticker').clone());">
-			<div class="menuitem">
+			<div class="menuitem contestants_svg">
                 <img src="/img/contestants.svg" alt="contestants"/>
 			</div>
 		</div>
 		<div class="menubutton" onclick="require('app').fillContent('tickets.html')">
-			<div class="menuitem">
+			<div class="menuitem tickets_svg">
                 <img src="/img/tickets.svg" alt="tickets"/>
 			</div>
 		</div>
@@ -59,13 +66,13 @@
 		<div id="Menu_Container">
 			<div id="Menu_Landscape">
 				<div class="menuitem" onclick="require('app').fillContent('home.html');">
-                    <div class="menu_img"><img src="/img/home.svg" alt="home" height="100%"/></div><div class="menu_text"><strong>Home</strong></div>
+                    <div class="menu_img home_svg"><img src="/img/blank.png" alt="home" width="100%"/></div><div class="menu_text"><strong>Home</strong></div>
 				</div>
 				<div class="menuitem" onclick="require('app').fillContent('stage_management_docs.html');">
-                    <div class="menu_img"><img src="/img/groups.svg" alt="home" height="100%"/></div><div class="menu_text"><strong>Groups</strong></div>
+                    <div class="menu_img groups_svg"><img src="/img/blank.png" alt="groups" width="100%"/></div><div class="menu_text"><strong>Groups</strong></div>
 				</div>
 				<div class="menuitem" onclick="require(['view/HospitalityView', 'view/TabView', 'model/TabCollection'], function (hospitalityView, tabView, tabCollection){hospitalityView.render(tabView, tabCollection);})">
-                    <div class="menu_img"><img src="/img/audience.svg" alt="home" height="100%"/></div><div class="menu_text"><strong>Audience</strong></div>
+                    <div class="menu_img audience_svg"><img src="/img/blank.png" alt="audience" width="100%"/></div><div class="menu_text"><strong>Audience</strong></div>
 				</div>
 			</div>
 			<div id="Social">
@@ -98,7 +105,7 @@
 					</ul>
 				</div>
 			</div>
-            <div><div id="HolidayInn"><a href="http://www.ihg.com/holidayinnexpress/hotels/us/en/the-hague/hagms/hoteldetail" target="_blank"><img src="img/holidayInnLogo.png" alt="holiday inn logo" height="100%"></a></div></div>
+            <div><div id="HolidayInn"><a href="http://www.ihg.com/holidayinnexpress/hotels/us/en/the-hague/hagms/hoteldetail" target="_blank"><img src="img/holidayInnLogo.png" alt="holiday inn logo"></a></div></div>
 		</div>
 	</div>
 	<div id="Bottom">

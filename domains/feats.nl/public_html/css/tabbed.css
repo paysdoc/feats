@@ -7,8 +7,8 @@
 }
 #TabbedContent {
     background-color: #ffffff;
-    margin: -0.05rem auto 0 auto;
-    padding: 0 1rem 0 1rem;
+    margin: -0.05em auto 0 auto;
+    padding: 0 1em 0 1em;
     width:95%;
     max-height: 90%;
     float: left;
@@ -22,8 +22,8 @@
     height: 100%;
 }
 .tabs {
-    margin: 0rem;
-    padding: 0rem;
+    margin: 0;
+    padding: 0;
 }
 .tabs li {
     list-style: none;
@@ -42,8 +42,8 @@
     background-image: -webkit-linear-gradient(bottom, #c399e0 0%, #ffffff 100%);
     background-image: linear-gradient(bottom, #c399e0 0%, #ffffff 100%);
     text-decoration:none;
-    padding: 0.3rem 0.4rem 0.4rem 0.4rem;
-    margin-right: -0.25rem;
+    padding: 0.3em 0.4em 0.4em 0.4em;
+    margin-right: -0.25em;
 }
 .active {
     background: #c399e0;
