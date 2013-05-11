@@ -1,8 +1,9 @@
 //Filename: app.js
 define([
-    'jQuery', 'webTicker'
-], function ($) {
-    return {
+    'jQuery', 'underscore', 'backbone', 'controller/Router', 'webTicker'
+], function ($, _, Backbone, router) {
+
+    var App = Backbone.View.extend({
         fillContent: function (urlString, elem) {
             elem = elem === undefined ? "#Content" : elem;
             this.doAjax(urlString, function(data) {
@@ -63,19 +64,14 @@ define([
             }, 1000);
         },
 
-        loadScript: function () {
-            this.fillContent('home.html');
-
-            var script = document.createElement("script");
-            script.type = "text/javascript";
-            script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBbqEBrrrT2xcFHGWTnkYPVU_SzEtXKH6w&sensor=true&callback=gmap.init_map";
-            document.body.appendChild(script);
-
-            $('#webticker').webTicker();
+        render : function () {
+            document.onload = $('#webticker').webTicker();
+            Backbone.history.start();
         },
 
-        initialise : function () {
-            document.onload = this.loadScript();
+        navigate : function(fragment, options) {
+            router.navigate(fragment, options);
         }
-    }
+    });
+    return new App();
 });

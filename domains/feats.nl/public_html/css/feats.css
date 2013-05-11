@@ -250,6 +250,7 @@ img {
     cursor: pointer;
 }
 .notice {
+    background: #ffffff;
     border: 1px #56008c solid;
     text-align: center;
     margin: 0 0 1rem 0;

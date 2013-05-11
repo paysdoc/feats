@@ -1,7 +1,10 @@
-define(function(){
+define([
+    'async!https://maps.googleapis.com/maps/api/js?key=AIzaSyBbqEBrrrT2xcFHGWTnkYPVU_SzEtXKH6w&sensor=true'
+], function(){
     return {
-        init_map: function() {
+        initialize: function() {
             this.buildMap("Map", true);
+            return this;
         },
 
         mapOnContent: function() {
@@ -42,6 +45,6 @@ define(function(){
                 theMap.setCenter(marker.getPosition());
             });
         }
-    };
+    }.initialize();
 });
 

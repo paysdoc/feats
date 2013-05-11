@@ -31,32 +31,32 @@
 		</div> 
 	</div>
 	<div id="Menu">   <!-- Menu buttons for handheld devices -->
-		<div class="menubutton" onclick="require('app').fillContent('home.html');">
+		<div class="menubutton" onclick="location='#'">
 			<div class="menuitem home_svg">
 				<img src="/img/home.svg" alt="home"/>
 			</div>
 		</div>
-		<div class="menubutton" onclick="require('app').fillContent('stage_management_docs.html');">
+		<div class="menubutton" onclick="location='#groups'">
 			<div class="menuitem groups_svg">
                 <img src="/img/groups.svg" alt="groups"/>
 			</div>
 		</div>
-		<div class="menubutton" onclick="require(['view/HospitalityView', 'view/TabbedView', 'model/TabCollection'], function (hospitalityView, tabView, tabCollection){hospitalityView.render(tabView, tabCollection);})">
+		<div class="menubutton" onclick="location='#hp'">
 			<div class="menuitem audience_svg">
                 <img src="/img/audience.svg" alt="audience"/>
 			</div>
 		</div>
-		<div class="menubutton" onclick="$('#Content').empty().html('<div id=&quot;ContentMap&quot;></div>');require('gmap').mapOnContent();">
+		<div class="menubutton" onclick="location='#map'">
 			<div class="menuitem map_svg">
                 <img src="/img/map.svg" alt="map"/>
 			</div>
 		</div>
-		<div class="menubutton" onclick="$('#Content').empty().html('<h2>This year\'s Contestants are</h2>').append($('#webticker').clone());">
+		<div class="menubutton" onclick="location='#contestants'">
 			<div class="menuitem contestants_svg">
                 <img src="/img/contestants.svg" alt="contestants"/>
 			</div>
 		</div>
-		<div class="menubutton" onclick="require('app').fillContent('tickets.html')">
+		<div class="menubutton" onclick="location='#tickets'">
 			<div class="menuitem tickets_svg">
                 <img src="/img/tickets.svg" alt="tickets"/>
 			</div>
@@ -65,13 +65,13 @@
 	<div id="Top">
 		<div id="Menu_Container">
 			<div id="Menu_Landscape">
-				<div class="menuitem" onclick="require('app').fillContent('home.html');">
+				<div class="menuitem" onclick="location='#'">
                     <div class="menu_img home_svg"><img src="/img/blank.png" alt="home" width="100%"/></div><div class="menu_text"><strong>Home</strong></div>
 				</div>
-				<div class="menuitem" onclick="require('app').fillContent('stage_management_docs.html');">
+				<div class="menuitem" onclick="location='#groups'">
                     <div class="menu_img groups_svg"><img src="/img/blank.png" alt="groups" width="100%"/></div><div class="menu_text"><strong>Groups</strong></div>
 				</div>
-				<div class="menuitem" onclick="require(['view/HospitalityView', 'view/TabView', 'model/TabCollection'], function (hospitalityView, tabView, tabCollection){hospitalityView.render(tabView, tabCollection);})">
+				<div class="menuitem" onclick="location='#hp'">
                     <div class="menu_img audience_svg"><img src="/img/blank.png" alt="audience" width="100%"/></div><div class="menu_text"><strong>Audience</strong></div>
 				</div>
 			</div>
@@ -82,12 +82,12 @@
 			</div>
 		</div> 
 		<div id="Content_Container">
-			<div id="Content" class="box"><img src="/img/poster.jpg" alt="poster"/></div>
+			<div id="Content" class="box"></div>
 		</div>
 		<div id="Info">
-			<div id="Map" onclick="$('#Content').empty().html('<div id=&quot;ContentMap&quot;></div>');require('gmap').mapOnContent();"></div>
-			<div id="Tickets" onclick="require('app').fillContent('tickets.html');"><div class="box"><p>Season Tickets (4 days) : &euro;70,- pp<br />Per day : &euro;20,- pp</p><p><a href="#">more...</a></p></div></div>
-			<div id="Marquee" onclick="$('#Content').empty().html('<h2>This year\'s Contestants are</h2>').append($('#webticker').clone());">
+			<div id="Map" onclick="location='#map'"></div>
+			<div id="Tickets" onclick="location='#tickets'"><div class="box"><p>Season Tickets (4 days) : &euro;70,- pp<br />Per day : &euro;20,- pp</p><p><a href="#">more...</a></p></div></div>
+			<div id="Marquee" onclick="location='#contestants'">
 				<div class="box">
 					<ul id="webticker">
 						<li>ATC (American Theatre Company, Brussels)</li>

@@ -32,7 +32,6 @@ require.config({
 
 require([
     'app', 'gmap'
-], function(app, gmap){
-    window.gmap = gmap;
-    app.initialise();
+], function(app){
+    app.render();
 });
