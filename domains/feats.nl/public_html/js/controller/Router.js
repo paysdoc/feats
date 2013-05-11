@@ -16,7 +16,6 @@ define(['backbone', 'gmap'], function (Backbone, gmap) {
 
         groups: function() {
             require(['view/TDPView', 'view/TabView', 'model/TabCollection'], function (TDPView, tabView, tabCollection){TDPView.render(tabView, tabCollection);});
-//            require('app').fillContent('stage_management_docs.html');
         },
 
         hp: function() {
