@@ -6,6 +6,7 @@ define(['jquery', 'backbone', 'model/TabCollection', 'app', 'pubsub'], function(
                 var json = $.parseJSON(data);
                 self.tabs = new TabCollection([
                     {name:'Arrival',content: json.arrival},
+                    {name:'More soon',content: json.more},
                     {name:'Technical Data Pack',content: json.tdp}
                 ]);
                 $.publish("hasTDP", self.tabs);
