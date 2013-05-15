@@ -8,6 +8,7 @@ define(['jQuery', 'underscore', 'backbone', 'model/TDPModel', 'model/TabCollecti
                 $('#TabbedContent').css('padding', '0');
                 $('#TabbedContent').css('width', 'auto');
                 $('#TabbedContent').css('overflow', 'hidden');
+                $('#TabbedContent').css('clear', 'left');
                 $.unsubscribe('hasTDP');
             })
         }
