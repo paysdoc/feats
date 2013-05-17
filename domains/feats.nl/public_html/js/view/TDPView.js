@@ -6,9 +6,10 @@ define(['jQuery', 'underscore', 'backbone', 'model/TDPModel', 'model/TabCollecti
             $.subscribe('hasTDP', function(e, tabs){
                 TabView.render(tabs);
                 $('#TabbedContent').css('padding', '0');
-                $('#TabbedContent').css('width', 'auto');
                 $('#TabbedContent').css('overflow', 'hidden');
                 $('#TabbedContent').css('clear', 'left');
+                $('#TabbedContent').css('height', '100%');
+                $('#TabbedContent').css('width', 'auto');
                 $.unsubscribe('hasTDP');
             })
         }
