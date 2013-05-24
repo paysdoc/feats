@@ -65,7 +65,6 @@ define([
         },
 
         render : function () {
-            document.onload = $('#webticker').webTicker();
             Backbone.history.start();
         },
 

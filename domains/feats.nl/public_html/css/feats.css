@@ -258,7 +258,13 @@ img {
     color: red;
     height: 4rem;
 }
-
+.item {
+    font-weight: bold;
+    margin-top: 0.2rem;
+}
+.winners {
+    margin: 0 0 0.5rem 0;
+}
 /* resizing */
 @media screen and (max-height: 31em) {
 	html {

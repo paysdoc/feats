@@ -11,7 +11,7 @@ define(['backbone', 'gmap'], function (Backbone, gmap) {
         },
 
         defaultRoute: function(defaultRoute) {
-            require('app').fillContent('home.html');
+            require('app').fillContent('winners.html');
         },
 
         groups: function() {
